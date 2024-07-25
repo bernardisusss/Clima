@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Previsão do Tempo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="searchbar">
+                <div class="form">
+                        <input type="text" placeholder="Digite aqui o nome da cidade" required id="cityinput">
+                        <input type="submit" id="enviar" value="enviar" class="sub">
+                </div>
+            </div>
+            <div class="contant">
+                <div class="box">
+                    <h2>Condição do céu</h2>
+                    <div class="img-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/252/252035.png" width="200">
+                    </div>
+                    <div class="deatil">
+                        <h3 id="descrição">Nublado</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Temperatura</h2>
+                    <div class="img-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/831/831682.png" width="200">
+                    </div>
+                    <div class="deatil">
+                        <h3 id="temp">32 c</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Vento</h2>
+                    <div class="img-box">
+                        <img src="data:image/png;base64,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" width="200">
+                    </div>
+                    <div class="deatil">
+                        <h3 id="vento">34km/h</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
